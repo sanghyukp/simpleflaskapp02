@@ -10,6 +10,11 @@ pipeline {
       steps {
         sh 'python -m unittest discover'
       }
-    }
+      post {
+        always {
+          junit 'test-reports/*.xml'
+        }
+      }
+    }    
   }
 }
