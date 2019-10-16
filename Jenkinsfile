@@ -8,7 +8,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'python -m unittest discover'
+        sh 'python -m tests.test_hello'
       }
       post {
         always {
