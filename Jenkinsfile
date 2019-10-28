@@ -3,9 +3,7 @@ pipeline {
   stages {    
     stage('build') {
       steps {
-        script {
-          System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS", "True")
-      }
+        sh 'whoami'        
         sh 'pip install -r requirements.txt'
       }
     }
