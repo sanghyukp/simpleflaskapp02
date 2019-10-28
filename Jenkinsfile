@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         script {
-          System.setProperty("Dorg.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS", "True")
+          System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS", "True")
       }
         sh 'pip install -r requirements.txt'
       }
